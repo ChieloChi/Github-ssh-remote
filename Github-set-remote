@@ -1,0 +1,36 @@
+ Before you can push to GitHub, you must have a remote repository linked to your local Git repo.
+
+Here’s the logical flow:
+
+The Typical Workflow:
+
+1️⃣ Create a repository on GitHub
+(e.g., go to GitHub - New repository - create my-project)
+
+2️⃣ Create a repository locally (if not already done)
+
+"git init"
+
+3️⃣ Set the Remote
+
+Link your local repo to the GitHub repo.
+If you want to use SSH (since you’ve set up your SSH key), use:
+
+"git remote add origin git@github.com:your-username/my-project.git"
+
+If you were using HTTPS, it would be:
+
+"git remote add origin https://github.com/your-username/my-project.git"
+
+4️⃣ Push Your Code:
+
+Once the remote is set, you can push:
+
+git push -u origin main
+(or master, or whatever branch you’re using)
+
+Summary
+✅ You must set the remote before pushing.
+✅ If you clone a repo from GitHub, the remote is already set.
+✅ If you start from scratch locally, you have to add the remote manually.
+✅ For SSH, make sure your remote is in SSH format (git@github.com:...).
